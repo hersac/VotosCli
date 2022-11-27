@@ -1,0 +1,13 @@
+.tabla{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.contenido{
+    width: 400px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.tarjeta{
+    height: 200px !important;
+}

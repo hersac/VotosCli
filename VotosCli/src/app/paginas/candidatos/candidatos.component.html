@@ -1,0 +1,16 @@
+<h2>Candidatos a las elecciones 2022</h2>
+<app-menu></app-menu>
+<div class="tabla">
+    <div *ngFor="let datos of candidatos" class="mb-4 contenido">
+        <div class="card bg-primary text-white shadow">
+            <div class="card-body tarjeta">
+                <div class="">
+                    <p>{{datos.candName}} {{datos.candLastName}}</p>
+                    <p>{{datos.partyCand.partyName}}</p>
+                    <p>{{datos.partyCand.slogan}}</p>
+                    <p>{{datos.identif}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

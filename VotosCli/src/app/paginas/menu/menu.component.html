@@ -1,0 +1,17 @@
+<div>
+    <button class="btnMenu" (click)="desplegar()"><span class="material-symbols-outlined">menu</span> Menu</button>
+    <div #menuContainer class="content">
+        <ul class="menu">
+            <li class="element"><a routerLink="/paginas/candidatos" routerLinkActive="active"><span class="material-symbols-outlined">diversity_3</span> Participantes</a></li>
+            <li><a routerLink="/paginas/votos" routerLinkActive="active"><span class="material-symbols-outlined">how_to_vote</span> A Votar</a></li>
+            <li><a routerLink="/paginas/perfil" routerLinkActive="active"><span class="material-symbols-outlined">account_circle</span> Perfil</a></li>
+            <li class="element"><a (click)="desplegarConfig()"><span class="material-symbols-outlined">settings</span> Configuracion</a>
+                <ul class="menu configElect" #configElect>
+                    <li><a routerLink="/paginas/Generales" routerLinkActive="active"><span class="material-symbols-outlined">tune</span> Generales</a></li>
+                    <li><a routerLink="/paginas/gestionUsuarios" routerLinkActive="active"><span class="material-symbols-outlined">manage_accounts</span> Gestion de Usuarios</a></li>
+                    <li (click)="salir()"><a><span class="material-symbols-outlined">power_settings_new</span> Cerrar sesion</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

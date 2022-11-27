@@ -1,0 +1,20 @@
+<h2>Mesas de votacion</h2>
+<app-menu></app-menu>
+<div class="tabla">
+    <div *ngFor="let info of candidatos">
+        <div class="pageCand">
+            <div class="card border-left-primary shadow h-100 py-2 contenido">
+                <div class="card-body tarjeta">
+                    <p>{{info.candName}} {{info.candLastName}}</p>
+                    <p>{{info.partyCand.partyName}}</p>
+                    <p>"{{info.partyCand.slogan}}"</p>
+                    <div class="btn-votar">
+                        <input type="hidden" value="{{info.candId}}" #infoIdentif>
+                        <input class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm btn-votar" type="submit" value="Votar" (click)="votar()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,37 @@
+<app-menu></app-menu>
+
+<h2>Perfil</h2>
+
+<div>
+    <table>
+        <tr>
+            <td>Correo Electronico: </td>
+            <td>{{email}}</td>
+        </tr>
+        <tr>
+            <td>passwd: </td>
+            <td> <input type="password" value="{{passwd}}"> </td>
+            <td> <button (click)="desplegar()">Cambiar</button></td>           
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <div>
+                    <tr>
+                        <td> <input type="password" placeholder="Nueva Contraseña" #nuevaContraseña> </td>         
+                    </tr>
+                    <tr>
+                        <td> <input type="password" placeholder="Repite la Contraseña"> </td>         
+                    </tr>
+                    <tr>
+                        <td><div> <button (click)="actualizar()" >Cambiar</button><button>Cancelar</button> </div></td>         
+                    </tr>
+                </div>
+            </td>
+        </tr>    
+        <tr>
+            <td>Rol: </td>
+            <td>{{rol}}</td>
+        </tr>
+    </table>
+</div>

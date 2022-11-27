@@ -1,0 +1,46 @@
+<div>
+    <div>
+        <h2>Gestion de Usuarios</h2>
+    </div>
+    <app-menu></app-menu>
+    <div class="tabla">
+        <div *ngFor="let datos of data; let i=index">
+            <div class="dataUsers contenido" #dataUsers>
+                <p>{{datos.email}}</p>
+                <p>{{datos.passwd}}</p>
+                <p><b>{{datos.rol.rolName}}</b></p>
+                <button (click)="desplegarOpciones()" class="btn-editar">Editar</button>
+            </div>
+            <div>
+                <form class="formulario" #formulario>
+                    <div><label for="email"></label></div>
+                    <div><input type="text" value="{{datos.email}}" #emailData></div>
+                    <div><label for="passwd"></label></div>
+                    <div><input type="text" value="{{datos.passwd}}" #passwordData></div>
+                    <div><label for="rol"></label></div>
+                    <div>
+                        <select name="rol" #rolData>
+                            <option value="{{datos.rol._id}}" style="background-color: blue; color:#fff;" >{{datos.rol.rolName}}</option>
+                            <option>Superadmin</option>
+                            <option>Administrador</option>
+                            <option>Jurado</option>
+                            <option>Veedor</option>
+                            <option>Elector</option>
+                            <option>Registrador Nacional</option>
+                            <option>Secretario General</option>
+                            <option>Secretario Privado</option>
+                            <option>Gerencia</option>
+                            <option>Talento Humano</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="hidden" value="{{datos._id}}" #idUser>
+                        <button (click)="guardar()" class="btn-save">Guardar</button>
+                        <button (click)="eliminar()" class="btn-delete">Eliminar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

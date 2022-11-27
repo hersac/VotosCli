@@ -1,0 +1,6 @@
+{
+    "url-backend": "localhost",
+    "port": 8000,
+    "url-backend-security": "http://localhost:8500",
+    "url-backend-votos":"http://localhost:8600"
+}

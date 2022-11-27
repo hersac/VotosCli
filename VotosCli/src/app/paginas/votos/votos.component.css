@@ -1,0 +1,19 @@
+.tabla{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.contenido{
+    margin: 10px;
+    width: 400px;
+}
+
+.tarjeta{
+    height: 200px;
+}
+
+.btn-votar{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
